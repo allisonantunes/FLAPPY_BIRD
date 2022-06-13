@@ -152,6 +152,7 @@ function flappyBird() {
         const temporizador = setInterval(() => {
             barreiras.animar()
             passaro.animar()
+            refrehs()
 
             if(bateu(passaro, barreiras)) {
                 clearInterval(temporizador)
@@ -161,4 +162,11 @@ function flappyBird() {
     }
 
 }
+function refrehs() {
+    const btn = document.querySelector("#refresh")
+    btn.addEventListener("click", function() {
+    location.reload();
+    })
+}   
+
 new flappyBird().start()
