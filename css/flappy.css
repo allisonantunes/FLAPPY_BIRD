@@ -53,10 +53,13 @@
     font-size: 70px;
     z-index: 100;
 }
-#refresh {
+#refresh, #endGame {
     position: relative;
-    top: 5px;
+    top: 2px;
     right: 5px;
     font-family: Pixel;
     font-size: 50px;
+}
+#endGame {
+    margin-bottom: 8px;
 }

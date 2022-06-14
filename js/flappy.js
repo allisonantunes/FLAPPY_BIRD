@@ -157,6 +157,7 @@ function flappyBird() {
             if(bateu(passaro, barreiras)) {
                 clearInterval(temporizador)
                 // Reiniciar()
+                endGame(pontos)
             }
         },20)
     }
@@ -167,6 +168,11 @@ function refrehs() {
     btn.addEventListener("click", function() {
     location.reload();
     })
-}   
+}
+
+function endGame(pontos) {
+    const pontosEnd = document.querySelector('#endGame')
+    pontosEnd.textContent = `Vc Conseguiu ${pontos} pontos!!` 
+}
 
 new flappyBird().start()
